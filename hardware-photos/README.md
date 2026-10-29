@@ -1,11 +1,11 @@
-DripGuard Hardware Photographs
+# DripGuard — Hardware Gallery
 
-This folder contains photographs documenting the hardware components, assembled electronics, and complete DripGuard prototype.
+This directory presents the hardware components, assembled electronics, and complete prototype of the **DripGuard Smart IV Infusion Monitoring and Prediction System**.
 
-Photographs
+## Photo Collection
 
-hardware_components_labeled.jpg — Individual hardware components with labels.
-
-assembled_hardware_setup.jpg — Connected hardware components and wiring.
-
-complete_dripguard_prototype.jpg — Complete prototype with hardware, wiring, and IV set.
+| No. | Photograph | Description |
+|---|---|---|
+| 01 | `hardware_components_labeled.jpg` | Individual hardware components with labels |
+| 02 | `assembled_hardware_setup.jpg` | Connected hardware components and wiring |
+| 03 | `complete_dripguard_prototype.jpg` | Complete prototype with hardware, wiring, and IV set |
