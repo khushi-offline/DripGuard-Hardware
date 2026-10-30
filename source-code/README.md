@@ -1,14 +1,19 @@
-# DripGuard Hardware Source Code
+# DripGuard Working Firmware
 
-## Code 19 — One-Way Communication
-The original firmware sends the latest IV monitoring readings from NodeMCU ESP8266 to the Python backend for dashboard display.
+This directory contains the firmware developed for the DripGuard Smart IV Infusion Monitoring and Prediction System.
 
-## Code 20 — Two-Way Communication (Main Working Code)
-Code 20 is the modified version of Code 19 and is the main firmware used for the project demonstration.
+## Firmware Files
 
-- Python dashboard sends bed volume and drip factor settings to NodeMCU ESP8266 through the **Apply Settings** option.
-- ESP8266 uses these settings for drop counting and IV monitoring calculations.
-- ESP8266 generates updated readings, including drop count, flow rate, infused volume, and remaining time, and sends them to Python for dashboard display.
+### 1. `dripguard_two_way_communication.ino`
+**Main Working Firmware**
 
-## Testing Programs
-The `testing-code/` directory contains five programs for testing individual hardware components and monitoring functions.
+The primary firmware used for the hardware implementation and project demonstration.
+
+- Receives bed volume and drip factor settings from the Python dashboard through the Apply Settings option.
+- Uses the received settings for drop counting and IV monitoring calculations.
+- Sends updated readings, including drop count, flow rate, infused volume, and remaining time, to the Python dashboard.
+
+### 2. `dripguard_one_way_communication.ino`
+**Earlier Firmware Version**
+
+The initial firmware developed for one-way communication. It sends the latest IV monitoring readings from the NodeMCU ESP8266 to the Python backend for dashboard display.
