@@ -1,19 +1,31 @@
-# DripGuard Working Firmware
+# DripGuard Source Code
 
-This directory contains the firmware developed for the DripGuard Smart IV Infusion Monitoring and Prediction System.
+This directory contains the firmware and testing programs developed for the DripGuard Smart IV Infusion Monitoring and Prediction System.
 
-## Firmware Files
+## Directory Structure
 
-### 1. `dripguard_two_way_communication.ino`
-**Main Working Firmware**
+### `working-code/`
 
-The primary firmware used for the hardware implementation and project demonstration.
+Contains the main working firmware and an earlier firmware version.
 
-- Receives bed volume and drip factor settings from the Python dashboard through the Apply Settings option.
-- Uses the received settings for drop counting and IV monitoring calculations.
-- Sends updated readings, including drop count, flow rate, infused volume, and remaining time, to the Python dashboard.
+- **`dripguard_two_way_communication.ino`** — Main firmware that receives settings from the Python dashboard and sends updated IV monitoring readings back to the dashboard.
+- **`dripguard_one_way_communication.ino`** — Earlier firmware that sends IV monitoring readings to the Python backend.
 
-### 2. `dripguard_one_way_communication.ino`
-**Earlier Firmware Version**
+See [`working-code/README.md`](working-code/README.md) for details.
 
-The initial firmware developed for one-way communication. It sends the latest IV monitoring readings from the NodeMCU ESP8266 to the Python backend for dashboard display.
+### `testing-code/`
+
+Contains five individual programs for testing the drop sensor, status LEDs, buzzer, drop counting, and flow-rate, volume, and time calculations.
+
+See [`testing-code/README.md`](testing-code/README.md) for details.
+
+## Development Environment
+
+- **Firmware language:** Arduino C/C++
+- **Hardware platform:** NodeMCU ESP8266
+- **Firmware development environment:** Arduino IDE
+- **Dashboard and backend:** Python
+
+## Configuration
+
+Configure the required Wi-Fi credentials and server IP address in the firmware before running it on your local network.
